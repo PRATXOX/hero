@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#173d32" />
+  <title>Thank You | Hero Homes Greater Noida</title>
+  <style>
+    :root{--forest:#173d32;--lime:#c4dc8a;--paper:#fffefb;--ink:#1a2822;--muted:#6f7b74}
+    *{box-sizing:border-box}body{margin:0;min-height:100vh;display:grid;place-items:center;padding:24px;background:linear-gradient(145deg,#edf2e8,#fffefb);font-family:Arial,sans-serif;color:var(--ink)}
+    main{width:min(560px,100%);background:white;border:1px solid #e4e9df;border-radius:28px;padding:44px 32px;text-align:center;box-shadow:0 24px 70px rgba(20,42,33,.1)}
+    .mark{width:58px;height:58px;margin:0 auto 22px;border-radius:18px 18px 18px 4px;display:grid;place-items:center;background:var(--forest);color:var(--lime);font-weight:800;font-size:26px}
+    .eyebrow{color:#607668;text-transform:uppercase;font-size:11px;letter-spacing:.16em;font-weight:800}h1{font-size:clamp(30px,5vw,42px);line-height:1.12;letter-spacing:-.04em;margin:15px 0}p{color:var(--muted);font-size:15px;line-height:1.75}
+    .actions{display:flex;justify-content:center;flex-wrap:wrap;gap:10px;margin-top:28px}.btn{display:inline-flex;align-items:center;justify-content:center;padding:14px 20px;border-radius:999px;text-decoration:none;font-weight:700;font-size:13px}.primary{background:var(--forest);color:white}.secondary{background:#25a766;color:white}.outline{border:1px solid #dfe5dc;color:var(--forest)}
+  </style>
+</head>
+<body>
+  <main>
+    <div class="mark">H</div>
+    <div class="eyebrow">Hero Homes · Greater Noida</div>
+    <h1>Thank you for your enquiry.</h1>
+    <p id="thankYouMessage">Your enquiry has been submitted successfully. Our team can follow up about pricing, floor plans or a site visit.</p>
+    <div class="actions"><a class="btn primary" href="tel:+919686897597">Call Now</a><a class="btn secondary" href="https://wa.me/919686897597?text=Hi%2C%20I%20submitted%20an%20enquiry%20for%20Hero%20Homes%20Greater%20Noida." target="_blank" rel="noopener noreferrer">WhatsApp</a><a class="btn outline" href="index.html">Back to Website</a></div>
+  </main>
+  <script>
+    // A local Live Server preview cannot save leads. Only the thank-you navigation is simulated locally.
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('preview') === '1') {
+      document.title = 'Thank-You Preview | Hero Homes Greater Noida';
+      document.querySelector('h1').textContent = 'Thank-you screen is working!';
+      document.getElementById('thankYouMessage').textContent = 'This is a local VS Code preview. No enquiry has been sent or saved. After deploying to Netlify and enabling Forms detection, real submissions can be collected.';
+    }
+  </script>
+</body>
+</html>

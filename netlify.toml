@@ -1,0 +1,4 @@
+[build]
+  publish = "public"
+
+# Static HTML/CSS/JS site; no build command or package installation is required.
